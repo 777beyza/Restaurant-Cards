@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2? family= Dürüst ve görüntülü=takas');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'inter',sans-serif; /*CSS'te font-family özelliği metnin yazı tipini belirtmek için kullanılır. Yazı tipi ailesini ve jenerik yazı aile adlarının öncelikli listesini belirtmek için kullanılır. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /*vh : değeri Viewport Height yani görüntü alanı yüksekliğidir. 100vh toplam görüntü alanı yüksekliğidir. ve 900px yüksekliğe sahip bir tarayıcıda 1vh = 900/100 = 9px olacaktır. Görüntü alanı yüksekliği değiştikçe bu oranda font-size değeri de artacak ya da azalacaktır.*/
+    margin: 0;
+    overflow: hidden; /*CSS "overflow" özelliği, bir alana sığmayacak kadar büyük içeriğe ne olacağını kontrol eder.Overflow özelliği, bir etiketin içeriği belirtilen alana sığmadığında içeriğin kırpılıp kırpılmayacağını veya kaydırma çubukları eklenip eklenmeyeceğini belirtir.*/
+}
+.container{
+    display: flex;
+    width: 90vw; /*vw : değeri Viewport Width yani görüntü alanı genişiğidir.*/
+}
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor:pointer;
+    flex: 0.5;
+    margin: 20px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel h3{
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
